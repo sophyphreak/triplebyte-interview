@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, CardText, CardTitle } from 'reactstrap';
+import { Row, Col, Card, CardText } from 'reactstrap';
 
 class App extends Component {
   constructor(props) {
@@ -18,26 +18,29 @@ class App extends Component {
       <>
         <Row>
           <Col sm={{ size: 3 }}>
+            <h3>Winnie</h3>
             <Card>
-              <CardTitle>Winnie</CardTitle>
               <CardText>salkjflkasdj</CardText>
             </Card>
           </Col>
           <Col sm={{ size: 3 }}>
+            <h3>Winnie</h3>
+
             <Card>
-              <CardTitle>Bob</CardTitle>
               <CardText>salkjflkasdj</CardText>
             </Card>
           </Col>
           <Col sm={{ size: 3 }}>
+            <h3>Winnie</h3>
+
             <Card>
-              <CardTitle>George</CardTitle>
               <CardText>salkjflkasdj</CardText>
             </Card>
           </Col>
           <Col sm={{ size: 3 }}>
+            <h3>Winnie</h3>
+
             <Card>
-              <CardTitle>A</CardTitle>
               <CardText>salkjflkasdj</CardText>
             </Card>
           </Col>
