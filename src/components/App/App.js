@@ -22,24 +22,33 @@ class App extends Component {
             <Card>
               <CardText>salkjflkasdj</CardText>
             </Card>
-          </Col>
-          <Col sm={{ size: 3 }}>
-            <h3>Winnie</h3>
-
             <Card>
               <CardText>salkjflkasdj</CardText>
             </Card>
           </Col>
           <Col sm={{ size: 3 }}>
             <h3>Winnie</h3>
-
+            <Card>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
             <Card>
               <CardText>salkjflkasdj</CardText>
             </Card>
           </Col>
           <Col sm={{ size: 3 }}>
             <h3>Winnie</h3>
-
+            <Card>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
+            <Card>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
+          </Col>
+          <Col sm={{ size: 3 }}>
+            <h3>Winnie</h3>
+            <Card>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
             <Card>
               <CardText>salkjflkasdj</CardText>
             </Card>
