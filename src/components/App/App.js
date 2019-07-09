@@ -35,6 +35,82 @@ class App extends Component {
           prevState.columnFour.push(cardMessage);
         });
         break;
+      default:
+        break;
+    }
+    this.forceUpdate();
+  }
+  moveRight(column, index) {
+    switch (column) {
+      case 1:
+        let columnOne = this.state.columnOne;
+        let cuttedCardText = columnOne.splice(index, 1);
+        let columnTwo = this.state.columnTwo.push(cuttedCardText);
+        this.setState(prevState => ({
+          columnOne,
+          columnTwo,
+          ...prevState
+        }));
+        break;
+      case 2:
+        columnTwo = this.state.columnTwo;
+        cuttedCardText = columnTwo.splice(index, 1);
+        let columnThree = this.state.columnThree.push(cuttedCardText);
+        this.setState(prevState => ({
+          columnTwo,
+          columnThree,
+          ...prevState
+        }));
+        break;
+      case 3:
+        columnThree = this.state.columnThree;
+        cuttedCardText = columnThree.splice(index, 1);
+        const columnFour = this.state.columnFour.push(cuttedCardText);
+        this.setState(prevState => ({
+          columnThree,
+          columnFour,
+          ...prevState
+        }));
+        break;
+      default:
+        break;
+    }
+    this.forceUpdate();
+  }
+  moveLeft(column, index) {
+    switch (column) {
+      case 2:
+        let columnTwo = this.state.columnTwo;
+        let cuttedCardText = columnTwo.splice(index, 1);
+        let columnOne = this.state.columnOne.push(cuttedCardText);
+        this.setState(prevState => ({
+          columnOne,
+          columnTwo,
+          ...prevState
+        }));
+        break;
+      case 3:
+        // columnThree = this.state.columnThree;
+        // cuttedCardText = columnThree.splice(index, 1);
+        // const columnFour = this.state.columnFour.push(cuttedCardText);
+        // this.setState(prevState => ({
+        //   columnThree,
+        //   columnFour,
+        //   ...prevState
+        // }))
+        break;
+      case 4:
+        // let columnOne = this.state.columnOne;
+        // let cuttedCardText = columnOne.splice(index, 1);
+        // let columnTwo = this.state.columnTwo.push(cuttedCardText);
+        // this.setState(prevState => ({
+        //   columnOne,
+        //   columnTwo,
+        //   ...prevState
+        // }))
+        break;
+      default:
+        break;
     }
     this.forceUpdate();
   }
@@ -55,9 +131,12 @@ class App extends Component {
             >
               Winnie
             </h3>
-            {this.state.columnOne.map(cardText => (
+            {this.state.columnOne.map((cardText, index) => (
               <Card>
                 <CardText>{cardText}</CardText>
+                <Button onClick={() => this.moveRight(1, index)}>
+                  move to right
+                </Button>
               </Card>
             ))}
             <Button onClick={() => this.onClick(1)}>Add a card</Button>
@@ -75,9 +154,12 @@ class App extends Component {
             >
               Winnie
             </h3>
-            {this.state.columnTwo.map(cardText => (
+            {this.state.columnTwo.map((cardText, index) => (
               <Card>
                 <CardText>{cardText}</CardText>
+                <Button onClick={() => this.moveRight(2, index)}>
+                  move to right
+                </Button>
               </Card>
             ))}
             <Button onClick={() => this.onClick(2)}>Add a card</Button>
@@ -95,9 +177,12 @@ class App extends Component {
             >
               Winnie
             </h3>
-            {this.state.columnThree.map(cardText => (
+            {this.state.columnThree.map((cardText, index) => (
               <Card>
                 <CardText>{cardText}</CardText>
+                <Button onClick={() => this.moveRight(3, index)}>
+                  move to right
+                </Button>
               </Card>
             ))}
             <Button onClick={() => this.onClick(3)}>Add a card</Button>
@@ -115,7 +200,7 @@ class App extends Component {
             >
               Winnie
             </h3>
-            {this.state.columnFour.map(cardText => (
+            {this.state.columnFour.map((cardText, index) => (
               <Card>
                 <CardText>{cardText}</CardText>
               </Card>
