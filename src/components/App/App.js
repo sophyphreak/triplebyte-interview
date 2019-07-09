@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import { Row, Col, Card, CardText, CardTitle } from 'reactstrap';
 
 class App extends Component {
   constructor(props) {
@@ -16,10 +16,32 @@ class App extends Component {
   render() {
     return (
       <>
-        <Button color="primary" onClick={() => this.onClick()}>
-          Press me
-        </Button>
-        {this.state.pressed && <h3>the button has indeed been pressed!!</h3>}
+        <Row>
+          <Col sm={{ size: 3 }}>
+            <Card>
+              <CardTitle>Winnie</CardTitle>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
+          </Col>
+          <Col sm={{ size: 3 }}>
+            <Card>
+              <CardTitle>Bob</CardTitle>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
+          </Col>
+          <Col sm={{ size: 3 }}>
+            <Card>
+              <CardTitle>George</CardTitle>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
+          </Col>
+          <Col sm={{ size: 3 }}>
+            <Card>
+              <CardTitle>A</CardTitle>
+              <CardText>salkjflkasdj</CardText>
+            </Card>
+          </Col>
+        </Row>
       </>
     );
   }
