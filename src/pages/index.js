@@ -5,11 +5,6 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import App from '../components/App/App';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <App />
-  </Layout>
-);
+const IndexPage = () => <App />;
 
 export default IndexPage;
